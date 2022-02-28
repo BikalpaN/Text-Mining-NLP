@@ -4,7 +4,8 @@
 #' 
 
 # Wd
-setwd("~/Desktop/hult_NLP_student/lessons/class2/data")
+setwd("~/GitHub/Lessons/class2/data")
+
 
 # library
 library(stringi)

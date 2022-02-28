@@ -4,7 +4,7 @@
 #'
 
 # Set the working directory
-setwd("~/Desktop/hult_NLP_student/lessons/class2/data")
+setwd("~/GitHub/Lessons/class2/data")
 
 # Libs
 library(stringi)
@@ -21,11 +21,13 @@ coffee    <- grepl("coffee", text$text, ignore.case=TRUE)
 starbucks <- grepl("starbucks", text$text, ignore.case=TRUE)
 
 # Review Logical Output
-head(starbucks, 10)
+head(starbucks, -10)
 
 # Find the row positions of a specific word appearing at least ONCE
 #this shows the difference between grep and grepl
 grep("mug", text$text, ignore.case=TRUE)
+
+grep(use)
 
 # Grep for indexing
 text[grep('mug', text$text),2]
