@@ -4,10 +4,12 @@
 #'
 
 # Set the working directory
-setwd("~/Desktop/hult_NLP_student/lessons/class2/data")
+setwd("~/GitHub/Lessons/class2/data")
 
 # Libs
+library(NLP)
 library(tm)
+
 
 # Options & Functions
 options(stringsAsFactors = FALSE)
@@ -50,9 +52,12 @@ txtCorpus <- VCorpus(DataframeSource(text))
 # Preprocess the corpus
 txtCorpus <- cleanCorpus(txtCorpus, stops)
 
+#mfile_encoding__ ("utf-8")
+
 # Check Meta Data; brackets matter!!
 txtCorpus[[4]]
 meta(txtCorpus[[4]]) #double [[...]]
+#add some comments after the class
 t(meta(txtCorpus[4])) #single [...]
 
 content(txtCorpus[4]) #single [...]
@@ -61,6 +66,7 @@ content(txtCorpus[[4]]) #double [...]
 # Need to plain text cleaned copy? Saves time on large corpora
 df <- data.frame(text = unlist(sapply(txtCorpus, `[`, "content")),
                  stringsAsFactors=F)
+
 
 # Or use lapply
 cleanText <- lapply(txtCorpus, content)
@@ -80,6 +86,7 @@ txtTdmM <- as.matrix(txtTdm)
 # Examine
 txtDtmM[610:611,491:493]
 txtTdmM[491:493,610:611]
+
 
 
 #### Go back to PPT ####

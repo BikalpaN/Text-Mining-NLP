@@ -5,13 +5,18 @@
 #'
 
 # Set the working directory
-setwd("~/Desktop/hult_NLP_student/lessons/class3/data")
+setwd("~/GitHub/Lessons/class3/data")
 
 # Libs
 library(tm)
 library(qdap)
 library(ggplot2)
 library(ggthemes)
+library(qdapDictionaries)
+library(qdapRegex)
+library(qdapTools)
+library(RColorBrewer)
+
 
 # Options & Functions
 options(stringsAsFactors = FALSE)
@@ -78,10 +83,12 @@ ggplot(topWords, aes(x=word, y=frequency)) +
 ############ Back to PPT
 
 # Inspect word associations
-associations <- findAssocs(tweetTDM, 'brewdog', 0.30)
+associations <- findAssocs(tweetTDM, c('brewdog'), 0.30)
+
+#associations <- findAssocs(tweetTDM, c('brewdog', 'heathrow'), 0.30)
 associations
 
-# Organize the word associations
+# Organize the word associations, because it is a list
 assocDF <- data.frame(terms=names(associations[[1]]),
                        value=unlist(associations))
 assocDF$terms <- factor(assocDF$terms, levels=assocDF$terms)
