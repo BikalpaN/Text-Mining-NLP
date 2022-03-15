@@ -5,7 +5,7 @@
 #'
 
 # Set the working directory
-setwd("~/Desktop/hult_NLP_student/lessons/class3/data")
+setwd("~/GitHub/Lessons/class3/data")
 
 # Libs
 library(tm)

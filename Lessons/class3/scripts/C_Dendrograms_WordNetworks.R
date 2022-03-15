@@ -5,7 +5,7 @@
 #'
 
 # Set the working directory
-setwd("~/Desktop/hult_NLP_student/lessons/class3/data")
+setwd("~/GitHub/Lessons/class3/data")
 
 # Libs
 library(tm)
@@ -58,7 +58,7 @@ reducedTDM <- as.data.frame(as.matrix(reducedTDM))
 hc <- hclust(dist(reducedTDM))
 plot(hc,yaxt='n')
 
-ggdendrogram(hc, rotate=FALSE) 
+ggdendrogram(hc, rotate=FALSE, size=2) 
 
 ############ Back to PPT
 

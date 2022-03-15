@@ -6,7 +6,7 @@
 #'
 
 # Set the working directory
-setwd("~/Desktop/hult_NLP_student/lessons/class3/data")
+setwd("~/GitHub/Lessons/class2/data")
 
 # Libs
 library(tm)
@@ -56,17 +56,21 @@ content(txtCorpus[[4]])
 # Need to plain text cleaned copy?r
 df <- data.frame(text = unlist(sapply(txtCorpus, `[`, "content")),
                  stringsAsFactors=F)
-#write.csv(df,'plain_coffee.csv',row.names = F)
+#write.csv(df,'LATEST_plain_coffee.csv',row.names = F)
+
+
+
 
 # Compare a single tweet
 text$text[4]
-df[4,]
+df[4,] #still a list if needed
 
 # Make a Document Term Matrix or Term Document Matrix depending on analysis
 txtDtm  <- DocumentTermMatrix(txtCorpus)
 txtTdm  <- TermDocumentMatrix(txtCorpus)
 txtDtmM <- as.matrix(txtDtm)
 txtTdmM <- as.matrix(txtTdm)
+dim(txtDtmM)
 
 # Examine
 txtDtmM[610:611,491:493]
