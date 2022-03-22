@@ -1,6 +1,6 @@
 #' Title: Polarity w/2+docs
 #' Purpose: Learn and calculate polarity 
-#' Author: Ted Kwartler
+
 #'
 # Wd
 setwd("~/GitHub/Lessons/class4/data")
