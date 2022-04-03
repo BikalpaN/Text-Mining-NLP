@@ -4,7 +4,7 @@
 #'FOR REALLY DECENT EXPLANATION w/more math http://i.amcat.nl/lda/understanding_alpha.html
 
 # Wd
-setwd("~/GitHub/Lessons/class6/data")
+setwd("~/GitHub/Lessons/class5B/data")
 
 # Install Issue on cloud...sometimes
 # install.packages("httpuv", dependencies = TRUE, INSTALL_opts = '--no-lock')
